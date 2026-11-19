@@ -154,3 +154,46 @@ pre code { background: none; padding: 0; font-size: inherit; }
 .site-footer { border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
 .site-footer .wrap { padding-top: 1.4rem; padding-bottom: 2.4rem; }
 .site-footer p { margin: 0 0 .6rem; }
+
+/* Status block for the principles and the model */
+.meta {
+  margin: 1.4rem 0 1.8rem; padding: .9rem 1.1rem;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+  display: grid; gap: .35rem;
+}
+.meta div { display: flex; flex-wrap: wrap; gap: 0 .6rem; }
+.meta dt { font-weight: 650; min-width: 4.5rem; }
+.meta dd { margin: 0; color: var(--muted); }
+
+/* The seven principles */
+.principles { list-style: none; padding: 0; margin: 1.2rem 0 1.8rem; display: grid; gap: 1rem; }
+.principles > li {
+  margin: 0; padding: 1.1rem 1.15rem;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+}
+.principles h3 { margin: 0 0 .4rem; display: flex; gap: .6rem; align-items: baseline; }
+.num, .lvl {
+  flex: none; display: inline-block; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-weight: 700; font-size: .85rem; text-align: center;
+}
+.num { min-width: 1.7rem; line-height: 1.7rem; }
+.test { margin-top: .8rem; padding: .7rem .9rem; border-left: 3px solid var(--accent); background: var(--bg); border-radius: 0 6px 6px 0; }
+.test-label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 650; margin: 0 0 .3rem; }
+.test ul { margin-bottom: .5rem; }
+.test p:last-child { margin: 0; color: var(--muted); font-size: .95rem; }
+
+/* The maturity levels */
+.levels { list-style: none; padding: 0; margin: 1.2rem 0 1.8rem; display: grid; gap: .8rem; }
+.levels > li {
+  margin: 0; padding: 1rem 1.1rem;
+  border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 8px 8px 0;
+}
+.levels h3 { margin: 0 0 .4rem; display: flex; flex-wrap: wrap; gap: .3rem .6rem; align-items: baseline; }
+.lvl { padding: 0 .6rem; line-height: 1.6rem; }
+.levels .req, .levels .up { font-size: .95rem; }
+.levels .up { color: var(--muted); margin-bottom: 0; }
+
+/* Short lists on the home page */
+.short { padding-left: 1.6rem; }
+.short li { margin-bottom: .35rem; }

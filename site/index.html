@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sovereign Agentic Website: the open pattern</title>
-<meta name="description" content="The Sovereign Agentic Website is an open pattern: a website built by agents and owned by the person it is for, which anyone can use without paying us.">
+<title>Sovereign Website: principles and pattern</title>
+<meta name="description" content="A sovereign website is a website you own and can move. Seven proposed principles, a maturity model from rented to proven, and an open pattern for building one with agents.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -16,6 +16,8 @@
     <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="principles.html">Principles</a></li>
+        <li><a href="maturity.html">Maturity</a></li>
         <li><a href="pattern.html">The pattern</a></li>
         <li><a href="sovereignty.html">Sovereignty</a></li>
         <li><a href="get-started.html">Get started</a></li>
@@ -26,12 +28,45 @@
 
 <main id="main">
   <div class="wrap">
-    <p class="mark">Sovereign Agentic Website · SAW</p>
-    <h1>An open pattern anyone can use, without paying us.</h1>
-    <p class="lede">A Sovereign Agentic Website is built by agents and owned by the person it is for: the files, the schema, the history and the address, in a repository they control, changed by talking to their own AI, and movable anywhere.</p>
+    <p class="mark">Proposed principles · version 0.1</p>
+    <h1>A sovereign website is a website you own and can move.</h1>
+    <p class="lede">This is the home of the principles that define a sovereign website, the maturity model that says how far a site has come, and the open pattern for building one with agents. All of it is open for comment, so anyone can test a site against it.</p>
+    <p>Moving is the hard part. One proprietary part in the middle, however small, is enough to lock a site in: nobody can move it for you without rebuilding that part, so you cannot even pay your way out.</p>
+
+    <h2 id="principles">Seven principles</h2>
+    <p>A website is sovereign when:</p>
+    <ol class="short">
+      <li><a href="principles.html#own"><strong>You own it.</strong></a> Repository and domain in your name.</li>
+      <li><a href="principles.html#move"><strong>You can move it.</strong></a> Any commodity host that serves files, without changes.</li>
+      <li><a href="principles.html#commodity"><strong>Nothing in the middle is proprietary.</strong></a> However small.</li>
+      <li><a href="principles.html#open-content"><strong>Its content and schema are open.</strong></a> Readable without the tool that made them.</li>
+      <li><a href="principles.html#change"><strong>Anyone can change it.</strong></a> You, any developer, or your own AI.</li>
+      <li><a href="principles.html#bounded"><strong>What works on it is bounded.</strong></a> By a behaviour policy.</li>
+      <li><a href="principles.html#proven"><strong>It is proven, not claimed.</strong></a> Deployed, regularly, on more than one host.</li>
+    </ol>
+    <p><a href="principles.html">The principles, and how to test a site against each one</a></p>
+
+    <h2 id="maturity">Where is your website, from 0 to 5?</h2>
+    <p>Sovereignty is not yes or no; it is how far you can move, on your terms.</p>
+    <ol class="short" start="0">
+      <li><a href="maturity.html#level-0"><strong>Rented.</strong></a> A hosted builder decides everything.</li>
+      <li><a href="maturity.html#level-1"><strong>Exportable.</strong></a> Your words leave; the design stays.</li>
+      <li><a href="maturity.html#level-2"><strong>A part you do not control.</strong></a> Open software, held by one paid component.</li>
+      <li><a href="maturity.html#level-3"><strong>Open, on one host.</strong></a> Tied to one host's features.</li>
+      <li><a href="maturity.html#level-4"><strong>Portable.</strong></a> Plain files, open tools, your domain.</li>
+      <li><a href="maturity.html#level-5"><strong>Sovereign and proven.</strong></a> Deployed on many hosts.</li>
+    </ol>
+    <p><a href="maturity.html">The maturity model, and what each level requires</a></p>
+
+    <div class="callout">
+      <p><strong>Proposed, version 0.1, and licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</strong> Written by Dinis Cruz to be argued with and improved. Copy them, adapt them and test any site against them, with credit. The proof that principle seven asks for, one commit deployed by one pipeline to many hosts, does not exist yet.</p>
+    </div>
+
+    <h2 id="agentic">Sovereign is what it is; agentic is how we build it</h2>
+    <p>A sovereign website could be made by hand. A Sovereign Agentic Website is one built by agents and owned by the person it is for: the files, the schema, the history and the address, in a repository they control, changed by talking to their own AI, and movable anywhere.</p>
     <p>Like WordPress, anyone can use the pattern without paying us. That is the point: a site you own should not depend on us existing.</p>
 
-    <h2>What it is made of</h2>
+    <h2 id="pattern">The pattern: what it is made of</h2>
     <p>A sovereign agentic website is a pattern before it is a product. It is one repository, holding six things:</p>
     <ol class="parts">
       <li><strong>A repository the owner controls</strong><span>Every change is a commit, and every version can be restored.</span></li>
@@ -43,24 +78,27 @@
     </ol>
     <p><a href="pattern.html">Read the pattern in full</a></p>
 
-    <h2>Why these two words</h2>
+    <h2 id="words">Why these two words</h2>
     <h3>Sovereign</h3>
-    <p>Sovereignty is not where your data is hosted, but whether you can move it: your site, its data and its schema, to anywhere else, on your own terms. <a href="sovereignty.html">The definition, and the four tests</a>.</p>
+    <p>Sovereignty is not where your data is hosted, but whether you can move it: your site, its data and its schema, to anywhere else, on your own terms. <a href="sovereignty.html">The definition, and the four tests</a>, which the <a href="principles.html">seven principles</a> now carry further.</p>
     <h3>Agentic</h3>
     <p>In 2000 the open web gave you software to run yourself; WordPress made publishing free, but you or someone you paid still did the work. Now a team of agents does the work: it interviews you, builds the site, shows you designs, and afterwards your own AI changes it when you ask. The agents work inside a behaviour policy that says what they may and may not touch, so the site stays yours while they work on it.</p>
 
-    <h2>Open, and also hosted</h2>
-    <p>This site, sovereignwebsite.org, is the home of the open pattern. The pattern's repository is still to be set up, in the open, in the <a href="https://github.com/SovereignWebsite">SovereignWebsite organisation on GitHub</a>.</p>
+    <h2 id="hosted">Open, and also hosted</h2>
+    <p>This site, sovereignwebsite.org, is the home of the principles and the open pattern. The pattern's repository is still to be set up, in the open, in the <a href="https://github.com/SovereignWebsite">SovereignWebsite organisation on GitHub</a>.</p>
     <p>For people who would rather not do the work themselves, a hosted version is being prepared: the repository and the site set up for you, the agents build it, and it is served at its own address until you point your own domain at it. See <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>. Hosted or not, it is the same kind of thing: a repository its owner controls, and can take anywhere.</p>
 
     <div class="next">
-      <a class="button" href="get-started.html">How to start</a>
-      <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">Why the name: the founding article</a>
+      <a class="button" href="principles.html">Test a site against the principles</a>
+      <a href="get-started.html">How to start</a>
+      <a href="https://newsroom.sgit.ai/articles/what-is-a-sovereign-website.html">Read: what is a sovereign website</a>
     </div>
 
     <section class="limits" aria-labelledby="limits-home">
       <h2 id="limits-home">What this does not claim</h2>
       <ul>
+        <li>The principles and the maturity model are a proposal, version 0.1, not a standard.</li>
+        <li>The every-host pipeline does not exist yet; only GitHub Pages is in use today.</li>
         <li>The pattern's repository does not exist yet; it will be set up in the open.</li>
         <li>The hosted version under this name is not running yet.</li>
         <li>Sovereign, here, means owning and being able to move. It is not a legal or certification claim.</li>
@@ -71,9 +109,9 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>sovereignwebsite.org: the open pattern for a Sovereign Agentic Website. The hosted version: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
+    <p>sovereignwebsite.org: the principles and the open pattern. The hosted service: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
     <p>Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation on GitHub. This site is plain files, with no cookies and no tracking; its source is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a>.</p>
-    <p>The thinking behind it is in articles by Dinis Cruz on <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">newsroom.sgit.ai</a>.</p>
+    <p>The thinking behind it is in articles by Dinis Cruz on newsroom.sgit.ai, <a href="https://newsroom.sgit.ai/articles/what-is-a-sovereign-website.html">what is a sovereign website</a> and <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">Sovereign Agentic Website</a>. Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
   </div>
 </footer>
 </body>

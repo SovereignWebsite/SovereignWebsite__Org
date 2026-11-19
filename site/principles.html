@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The seven principles · Sovereign Website</title>
+<meta name="description" content="Seven proposed principles that define a sovereign website, a website you own and can move, each with how to test a site against it. Version 0.1, open for comment, CC BY 4.0.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sovereign<span>Website</span>.org</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="principles.html" aria-current="page">Principles</a></li>
+        <li><a href="maturity.html">Maturity</a></li>
+        <li><a href="pattern.html">The pattern</a></li>
+        <li><a href="sovereignty.html">Sovereignty</a></li>
+        <li><a href="get-started.html">Get started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="mark">Proposed principles · version 0.1</p>
+    <h1>Seven principles for a sovereign website.</h1>
+    <p class="lede">A sovereign website is a website you own and can move. These seven principles say what that means, in terms anyone can test a site against, whoever built it and however.</p>
+
+    <dl class="meta" aria-label="About these principles">
+      <div><dt>Status</dt><dd>Proposed, version 0.1, open for comment</dd></div>
+      <div><dt>Author</dt><dd>Dinis Cruz</dd></div>
+      <div><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: copy, adapt and use them, with credit</dd></div>
+      <div><dt>Source</dt><dd><a href="https://newsroom.sgit.ai/articles/what-is-a-sovereign-website.html">What is a sovereign website</a></dd></div>
+    </dl>
+
+    <h2 id="why">Why one small part matters</h2>
+    <p>Owning a website is the easy part. Moving it is where it fails. Once there is a piece of proprietary technology in the middle, it does not matter how small it is: you cannot move the site. Nobody else can move it for you either, and you cannot even pay someone to, because they would have to rebuild that component first. A paid plugin, a platform's form handler, a hosting company's special function, an agency's private framework: any one of them is enough.</p>
+    <p>Lock-in also has more than one place to hide: where the domain is registered, the technology underneath, and the platform it runs on. A site that is portable in its code but registered in someone else's name is not sovereign. Nor is one in your name that only runs on one company's servers.</p>
+    <p>Sovereign is what a site is, not how it was built. A sovereign website could be made by hand; a Sovereign Agentic Website is one built and changed by agents. The principles hold for both.</p>
+
+    <h2 id="principles">A website is sovereign when</h2>
+    <ol class="principles">
+      <li id="own">
+        <h3><span class="num">1</span> You own it.</h3>
+        <p>The site, its content and its history are in a repository in your name, and the domain is registered to you, at a registrar you chose.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Whose account holds the repository? It should be yours, not your builder's.</li>
+            <li>Can you see the full history of changes, not only the current version?</li>
+            <li>Look up who the domain is registered to, and at which registrar. Both should be you and your choice.</li>
+          </ul>
+          <p>It fails if any one of these is in someone else's name.</p>
+        </div>
+      </li>
+      <li id="move">
+        <h3><span class="num">2</span> You can move it.</h3>
+        <p>It runs on any commodity host that can serve files, without changes.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Take the files the site is served from and put them on a different host that only serves files.</li>
+            <li>Does every page work there, without editing anything?</li>
+          </ul>
+          <p>It fails if the site needs changes, or a particular host, to run.</p>
+        </div>
+      </li>
+      <li id="commodity">
+        <h3><span class="num">3</span> Nothing in the middle is proprietary.</h3>
+        <p>Every part it needs to build and run is open and commodity. If one part is not, the site is not sovereign, however small that part is.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>List every part the site needs to be built and to run: the generator, the theme, each plugin, the forms, any functions, any feature of the host.</li>
+            <li>For each one, ask: is it open, and could someone else supply or rebuild it without the company that made it?</li>
+          </ul>
+          <p>It fails on the first part that is not. One is enough.</p>
+        </div>
+      </li>
+      <li id="open-content">
+        <h3><span class="num">4</span> Its content and schema are open.</h3>
+        <p>Words, data and their structure are in open formats you can read without the tool that made them.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Open the site's content and data files without the tool that made them, for example in a plain text editor.</li>
+            <li>Can you read both the words and how they are structured: pages, fields, lists, relationships?</li>
+          </ul>
+          <p>It fails if the content, or its structure, can only be read through the original tool or an export format the vendor chose.</p>
+        </div>
+      </li>
+      <li id="change">
+        <h3><span class="num">5</span> Anyone can change it.</h3>
+        <p>You, any developer, or your own AI, without asking the company that built it.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Could a developer you choose, who has never worked with your builder, make a change and publish it?</li>
+            <li>Could your own AI, pointed at the repository, do the same?</li>
+          </ul>
+          <p>It fails if a change needs the builder's permission, account, licence or private tools.</p>
+        </div>
+      </li>
+      <li id="bounded">
+        <h3><span class="num">6</span> What works on it is bounded.</h3>
+        <p>Agents and tools that change it work inside a behaviour policy that says what they may touch.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Is there a written behaviour policy, in the repository, saying what each agent or tool may and may not change?</li>
+            <li>Do the agents and tools that change the site actually work inside it, with checks that refuse what it does not allow?</li>
+          </ul>
+          <p>It fails if what changes the site is limited only by what it can reach.</p>
+        </div>
+      </li>
+      <li id="proven">
+        <h3><span class="num">7</span> It is proven, not claimed.</h3>
+        <p>It is deployed, regularly, on more than one host, so that moving is a thing that already happened, not a promise.</p>
+        <div class="test">
+          <p class="test-label">How to test it</p>
+          <ul>
+            <li>Is the same version of the site live, or recently deployed, on more than one host?</li>
+            <li>Is there a record of those deployments, and are they repeated, not done once?</li>
+          </ul>
+          <p>It fails if moving has only ever been described, never done.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout" id="where-next">
+      <p><strong>Where is your site?</strong> Sovereignty is not yes or no; it is how far you can move, on your terms. The <a href="maturity.html">maturity model</a> places a site on six levels, from 0, rented, to 5, sovereign and proven.</p>
+    </div>
+
+    <h2 id="proof">The proof: one commit, every host</h2>
+    <p>Principle seven needs a demonstration. The proposal is that every Sovereign Agentic Website should carry one: the same commit, deployed by one pipeline to many hosts. The hosts named for it are GitHub Pages, Cloudflare Pages, Netlify, Azure Static Web Apps, AWS S3 and CloudFront, Codeberg Pages in Germany, a European cloud's storage bucket, and a plain folder on your own computer served by any web server. Each host would get a short set of instructions, so that anyone can repeat it.</p>
+    <p>That pipeline <strong>does not exist yet</strong>. Only GitHub Pages is in use today. Whether such a site can also be built and served inside an AI's own sandbox is an open question.</p>
+
+    <h2 id="comment">Open for comment</h2>
+    <p>These principles are a proposal, written to be argued with and improved. Version 0.1 is the first published here. They are licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, so you may copy them, adapt them and test any site against them, with credit to Dinis Cruz and a link to this page. The source of this page is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a> on GitHub, where changes to it are made in the open.</p>
+
+    <div class="next">
+      <a class="button" href="maturity.html">The maturity model</a>
+      <a href="https://newsroom.sgit.ai/articles/what-is-a-sovereign-website.html">Read: what is a sovereign website</a>
+    </div>
+
+    <section class="limits" aria-labelledby="limits-principles">
+      <h2 id="limits-principles">What this does not claim</h2>
+      <ul>
+        <li>The principles are a proposal, version 0.1, not a standard.</li>
+        <li>The tests are a plain reading of each principle, offered to make them usable; they are open for comment too. Principle seven does not yet say how often counts as regularly.</li>
+        <li>The every-host pipeline does not exist yet; only GitHub Pages is in use today.</li>
+        <li>Sovereign, here, means owning a site and being able to move it. It is not a legal or certification claim.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>sovereignwebsite.org: the principles and the open pattern. The hosted service: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
+    <p>Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation on GitHub. This site is plain files, with no cookies and no tracking; its source is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a>. Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    <p>Sources: articles by Dinis Cruz on newsroom.sgit.ai, <a href="https://newsroom.sgit.ai/articles/what-is-a-sovereign-website.html">what is a sovereign website</a>, <a href="https://newsroom.sgit.ai/articles/your-own-registrar.html">your own registrar</a>, <a href="https://newsroom.sgit.ai/articles/no-lock-in.html">no lock-in</a> and <a href="https://newsroom.sgit.ai/articles/feature-behaviour-policies.html">feature behaviour policies</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
