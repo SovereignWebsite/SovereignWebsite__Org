@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get started · Sovereign Agentic Website</title>
+<meta name="description" content="How anyone could start a Sovereign Agentic Website today, honestly: the pattern repository is being written now, in the open, and the Factory repository is a working example.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sovereign<span>Website</span>.org</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pattern.html">The pattern</a></li>
+        <li><a href="sovereignty.html">Sovereignty</a></li>
+        <li><a href="get-started.html" aria-current="page">Get started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="mark">Get started</p>
+    <h1>How anyone could start, today.</h1>
+    <p class="lede">To be plain about where things are: the pattern's repository is being written now, in the open, in the <a href="https://github.com/SovereignWebsite">SovereignWebsite organisation on GitHub</a>. There is no finished template to copy yet.</p>
+    <p>What there is: a clear description of the parts (<a href="pattern.html">the pattern</a>), and a working example of an agent pipeline held to a behaviour policy. Here is how you could start from those.</p>
+
+    <h2 id="steps">Six steps</h2>
+    <ol>
+      <li><strong>Make a repository you control.</strong> On your own account, not someone else's. Everything else goes in it.</li>
+      <li><strong>Put the site in it as plain files.</strong> Static HTML and CSS, no server code, no database, no cookies unless you choose to add them.</li>
+      <li><strong>Keep content and structure as files.</strong> In open formats your own AI can read and change, so you own the schema as well as the pages.</li>
+      <li><strong>Write a <code>CLAUDE.md</code>.</strong> What the site is, how to change words and photos, which checks run, and what not to touch.</li>
+      <li><strong>Write a behaviour policy.</strong> What any agent may change, and what it may never do. Anything not listed is refused.</li>
+      <li><strong>Add checks and a deploy.</strong> A build, validation and a leak scan on every change, then publish the files to any static host. GitHub Pages serves a static site with HTTPS and a custom domain, for free.</li>
+    </ol>
+    <p>Then point your own AI at the repository, and start editing.</p>
+
+    <h2 id="example">The working example: the Factory</h2>
+    <p><a href="https://github.com/SovereignWebsite/SovereignWebsite__Factory">SovereignWebsite__Factory</a> is the control repository of the SovereignWebsite organisation: the organisation as code, with everything done by CI under an Agent Behaviour Policy in <code>policy/abp.json</code>. It is the clearest place to see steps 5 and 6 working:</p>
+    <ul>
+      <li><strong>The policy:</strong> what each agent may change, what each pipeline may do, and every privilege its GitHub App and cloud role hold, with the reason. Anything not listed is refused.</li>
+      <li><strong>Checks</strong> on every pull request and push, read-only and with no secrets: tests, policy validation, a leak scan, signed commits and policy paths, and a dry plan checked against the policy.</li>
+      <li><strong>Apply pipelines</strong> that may only take the actions the policy lists, and are always refused actions such as deleting, transferring, archiving or making a repository private.</li>
+      <li><strong>The owner decides:</strong> changes to the policy, the workflows and the build scripts take effect only when the owner merges them, and releases to the main branch are merged only by the owner.</li>
+    </ul>
+    <p>Its code is Apache-2.0 and its text CC BY 4.0, as its README states, so you can read it, learn from it and reuse it.</p>
+
+    <h2 id="work">Free code is not free work</h2>
+    <p>Using the pattern costs nothing, and the running and the upkeep are yours. Owning the files means you can move; it does not move them for you. And a static site is not automatically safe: the policy and the checks are there because an AI can still publish something it should not.</p>
+
+    <h2 id="hosted">If you would rather not do it yourself</h2>
+    <p>A hosted version is being prepared, with the repository and the site set up for you and the agents building it: see <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>. The result is the same kind of thing, a repository you control and can take anywhere.</p>
+
+    <h2 id="follow">Follow the work</h2>
+    <ul>
+      <li>The organisation and its repositories: <a href="https://github.com/SovereignWebsite">github.com/SovereignWebsite</a></li>
+      <li>Why the name, and the open pattern: <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">Sovereign Agentic Website</a></li>
+      <li>Why governance comes with every step, even the free one: <a href="https://newsroom.sgit.ai/articles/governance-from-zero.html">governance from zero</a></li>
+      <li>How one commit can make a repository and a live site: <a href="https://newsroom.sgit.ai/articles/one-commit-one-site-one-owner.html">one commit, one site, one owner</a></li>
+    </ul>
+
+    <section class="limits" aria-labelledby="limits-start">
+      <h2 id="limits-start">What this does not claim</h2>
+      <ul>
+        <li>The pattern's repository is not published as finished; these steps describe the pattern, not a supported product.</li>
+        <li>The Factory is an example of CI under a behaviour policy for an organisation, not a site template.</li>
+        <li>The hosted version under this name is not running yet.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>sovereignwebsite.org: the open pattern for a Sovereign Agentic Website. The hosted version: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
+    <p>Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation on GitHub. This site is plain files, with no cookies and no tracking; its source is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a>.</p>
+    <p>Sources: articles by Dinis Cruz on newsroom.sgit.ai, and the <a href="https://github.com/SovereignWebsite/SovereignWebsite__Factory">Factory</a>'s README and policy.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The pattern · Sovereign Agentic Website</title>
+<meta name="description" content="What the Sovereign Agentic Website pattern is: a repository the owner controls, the site as plain files, content and schema, CLAUDE.md for the agents, a behaviour policy limiting them, and checks and a deploy that run on any host.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sovereign<span>Website</span>.org</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pattern.html" aria-current="page">The pattern</a></li>
+        <li><a href="sovereignty.html">Sovereignty</a></li>
+        <li><a href="get-started.html">Get started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="mark">The pattern</p>
+    <h1>One repository, owned by the person the site is for.</h1>
+    <p class="lede">A sovereign agentic website is a repository the owner controls, holding the site as plain files, its content and its schema, the instructions for the agents and the behaviour policy that limits them, with checks and a deploy that run on any host.</p>
+    <p>Each part below is there for one reason: so that the site belongs to its owner, and agents can work on it without taking that away.</p>
+
+    <h2 id="repository">1. A repository the owner controls</h2>
+    <p>The site lives in the owner's own repository, with its history. Every change is a commit, and every version can be restored. Nothing of the owner's has to be kept by anyone else: if the people who set it up were bought, or disappeared, the owner would already hold everything.</p>
+    <p>The hand-over is one sentence: here is your repository; point your own AI at it, and start editing.</p>
+
+    <h2 id="files">2. The site as plain files</h2>
+    <p>The site is static: files, built once and served as they are.</p>
+    <ul>
+      <li>No server code running, no database, no plugin to patch, and no login page on the site itself to attack.</li>
+      <li>No cookies unless the owner adds them, so nothing to put behind a banner, and no tracking by whoever built it.</li>
+      <li>Served from any static host: GitHub Pages, for free, or any web host.</li>
+    </ul>
+    <p>The static design removes a whole category of flaw, code running on a server. That is an argument, not a measurement: no study we know of measures how much safer static sites are. Read more in <a href="https://newsroom.sgit.ai/articles/static-against-the-platforms.html">static against the platforms</a>.</p>
+
+    <h2 id="schema">3. Content and schema</h2>
+    <p>The structure of the site and its content are files in the repository, in open formats, which the owner's own AI can read and change. This matters as much as the code: an export in a format the vendor chose is access, not control. Owning the schema is one of the <a href="sovereignty.html#tests">four tests of sovereignty</a>.</p>
+
+    <h2 id="claude-md">4. CLAUDE.md for the agents</h2>
+    <p>A <code>CLAUDE.md</code> at the root of the repository is written for whoever works on the site, the owner and their agents: what the site is, how to change words and photos, which checks run, and what not to touch. The owner changes the site by talking to their own AI, not to a platform, and the AI starts from those instructions.</p>
+    <p>Because it is an agent doing the editing, the site can do whatever that agent can connect to: a new page, a rewritten section, a feed from another system.</p>
+
+    <h2 id="policy">5. A behaviour policy that limits the agents</h2>
+    <p>An agent behaviour policy says what any agent working on the site may and may not do. It is a file in the repository, so the limits are written down, and checks can hold the agents to them rather than relying on memory.</p>
+    <p>The <a href="https://github.com/SovereignWebsite/SovereignWebsite__Factory">SovereignWebsite__Factory</a> repository is a working example. Its <code>policy/abp.json</code> lists what each agent may change, what each pipeline may do, and every privilege its automation holds, with the reason; anything not listed is refused. An abridged excerpt:</p>
+    <pre><code>"org-apply": {
+  "allowed": ["repo.create", "repo.update_settings",
+              "pages.enable", "pages.enforce_https", ...],
+  "refused_always": ["repo.delete", "repo.transfer",
+                     "repo.archive", "repo.make_private", ...]
+}</code></pre>
+    <p>In that repository, changes to the policy itself, to the workflows and to the build scripts take effect only when the owner merges them. The agents can propose; the owner decides.</p>
+
+    <h2 id="checks">6. Checks and a deploy that run on any host</h2>
+    <p>Before anything goes live, checks run on every change. In the examples the pattern comes from, they include a build, validation, a leak scan for anything private, and, in the Factory, a check that every commit is signed and only touches paths the policy allows. Then the deploy publishes the files.</p>
+    <p>Because the site is plain files, the deploy is not tied to one provider: the same files serve from GitHub Pages or any web host. This site is built that way too: it is plain files in a repository, published by a short GitHub Pages workflow.</p>
+
+    <div class="callout">
+      <p><strong>A static site is not automatically safe.</strong> An owner's AI could publish something private, embed a script from somewhere unsafe, or break a page. That is why the pattern carries guard rails, the policy and the checks, and why every change is a commit that can be undone.</p>
+    </div>
+
+    <div class="next">
+      <a class="button" href="get-started.html">How to start</a>
+      <a href="sovereignty.html">What sovereign means here</a>
+    </div>
+
+    <section class="limits" aria-labelledby="limits-pattern">
+      <h2 id="limits-pattern">What this does not claim</h2>
+      <ul>
+        <li>This is a description of the pattern, not a finished specification; the pattern's repository is being written now.</li>
+        <li>The examples named here use GitHub and Claude; the pattern itself is plain files, a policy and checks, meant to run on any host.</li>
+        <li>No security figure is claimed for static sites.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>sovereignwebsite.org: the open pattern for a Sovereign Agentic Website. The hosted version: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
+    <p>Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation on GitHub. This site is plain files, with no cookies and no tracking; its source is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a>.</p>
+    <p>Sources: articles by Dinis Cruz on newsroom.sgit.ai, including <a href="https://newsroom.sgit.ai/articles/the-website-cell.html">the website cell</a>, <a href="https://newsroom.sgit.ai/articles/static-against-the-platforms.html">static against the platforms</a> and <a href="https://newsroom.sgit.ai/articles/one-commit-one-site-one-owner.html">one commit, one site, one owner</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

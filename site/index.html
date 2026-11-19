@@ -1,27 +1,80 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sovereign Agentic Website: the open pattern</title>
-<meta name="description" content="An open pattern anyone can use, without paying us.">
-<style>
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5c57;--accent:#2f6b4f;--line:#e4e1d8}
-@media (prefers-color-scheme:dark){:root{--bg:#141513;--fg:#ecebe6;--muted:#a8a69e;--accent:#7fc3a0;--line:#2c2d29}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:44rem;margin:0 auto;padding:12vh 1rem 4rem}
-.mark{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
-h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.4rem 0 1rem}
-p{color:var(--muted);margin:0 0 1rem}a{color:var(--accent)}
-footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
-</style>
+<meta name="description" content="The Sovereign Agentic Website is an open pattern: a website built by agents and owned by the person it is for, which anyone can use without paying us.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-<div class="mark">Sovereign Agentic Website</div>
-<h1>An open pattern anyone can use, without paying us.</h1>
-<p>A sovereign agentic website is a repository its owner controls: the site as plain files, its content and schema, the instructions for the agents, the behaviour policy that limits them, and checks and a deploy that run on any host.</p><p>Like WordPress, anyone can use the pattern for free. A site you own should not depend on us existing.</p><p>The pattern is being written now, in the open.</p>
-<footer>sovereignwebsite.org · Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation · Read why: <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">Sovereign Agentic Website</a></footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sovereign<span>Website</span>.org</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="pattern.html">The pattern</a></li>
+        <li><a href="sovereignty.html">Sovereignty</a></li>
+        <li><a href="get-started.html">Get started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="mark">Sovereign Agentic Website · SAW</p>
+    <h1>An open pattern anyone can use, without paying us.</h1>
+    <p class="lede">A Sovereign Agentic Website is built by agents and owned by the person it is for: the files, the schema, the history and the address, in a repository they control, changed by talking to their own AI, and movable anywhere.</p>
+    <p>Like WordPress, anyone can use the pattern without paying us. That is the point: a site you own should not depend on us existing.</p>
+
+    <h2>What it is made of</h2>
+    <p>A sovereign agentic website is a pattern before it is a product. It is one repository, holding six things:</p>
+    <ol class="parts">
+      <li><strong>A repository the owner controls</strong><span>Every change is a commit, and every version can be restored.</span></li>
+      <li><strong>The site as plain files</strong><span>Static: no server code, no database, no plugins, no cookies unless the owner adds them.</span></li>
+      <li><strong>Content and schema</strong><span>The structure of the site and its content, as files in open formats.</span></li>
+      <li><strong>CLAUDE.md for the agents</strong><span>What the site is, how to change it, the checks, and what not to touch.</span></li>
+      <li><strong>A behaviour policy</strong><span>What any agent working on the site may and may not do.</span></li>
+      <li><strong>Checks and a deploy</strong><span>Run before anything goes live, onto any static host.</span></li>
+    </ol>
+    <p><a href="pattern.html">Read the pattern in full</a></p>
+
+    <h2>Why these two words</h2>
+    <h3>Sovereign</h3>
+    <p>Sovereignty is not where your data is hosted, but whether you can move it: your site, its data and its schema, to anywhere else, on your own terms. <a href="sovereignty.html">The definition, and the four tests</a>.</p>
+    <h3>Agentic</h3>
+    <p>In 2000 the open web gave you software to run yourself; WordPress made publishing free, but you or someone you paid still did the work. Now a team of agents does the work: it interviews you, builds the site, shows you designs, and afterwards your own AI changes it when you ask. The agents work inside a behaviour policy that says what they may and may not touch, so the site stays yours while they work on it.</p>
+
+    <h2>Open, and also hosted</h2>
+    <p>This site, sovereignwebsite.org, is the home of the open pattern. The pattern's repository is being written now, in the open, in the <a href="https://github.com/SovereignWebsite">SovereignWebsite organisation on GitHub</a>.</p>
+    <p>For people who would rather not do the work themselves, a hosted version is being prepared: the repository and the site set up for you, the agents build it, and it is served at its own address until you point your own domain at it. See <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>. Hosted or not, it is the same kind of thing: a repository its owner controls, and can take anywhere.</p>
+
+    <div class="next">
+      <a class="button" href="get-started.html">How to start</a>
+      <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">Why the name: the founding article</a>
+    </div>
+
+    <section class="limits" aria-labelledby="limits-home">
+      <h2 id="limits-home">What this does not claim</h2>
+      <ul>
+        <li>The pattern's repository is not finished; it is being written now, in the open.</li>
+        <li>The hosted version under this name is not running yet.</li>
+        <li>Sovereign, here, means owning and being able to move. It is not a legal or certification claim.</li>
+      </ul>
+    </section>
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>sovereignwebsite.org: the open pattern for a Sovereign Agentic Website. The hosted version: <a href="https://sovereignwebsite.ai">sovereignwebsite.ai</a>.</p>
+    <p>Part of the <a href="https://github.com/SovereignWebsite">SovereignWebsite</a> organisation on GitHub. This site is plain files, with no cookies and no tracking; its source is in <a href="https://github.com/SovereignWebsite/SovereignWebsite__Org">SovereignWebsite__Org</a>.</p>
+    <p>The thinking behind it is in articles by Dinis Cruz on <a href="https://newsroom.sgit.ai/articles/sovereign-agentic-website.html">newsroom.sgit.ai</a>.</p>
+  </div>
+</footer>
 </body>
 </html>
