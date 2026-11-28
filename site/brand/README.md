@@ -14,4 +14,14 @@ Colours: navy #0f1e3d, crown green #86c9a6, deep green #2b6448, ink #1d1d1b, whi
 
 Licence: CC BY 4.0, as the repository's LICENCE.md. Attribute to Dinis Cruz and the Sovereign Website project, with a link to https://sovereignwebsite.org.
 
+## Variations (28 November 2026)
+
+Three more directions, asked for by Dinis Cruz after seeing the first, in `site/brand/variations/` (each as `-mark.svg`, `-wordmark.svg` and `-wordmark-navy.svg`), compared at https://sovereignwebsite.org/brand/variations/:
+
+- `sw-crown`: a bold S and a green W under one small crown.
+- `sws`: SWS, the green W between the two S like a crown, over a green line.
+- `sovereign-shield`: a crowned shield with a bold S.
+
+The name stays Sovereign Website in every one.
+
 Usage guidance and previews: site/brand/index.html (https://sovereignwebsite.org/brand/).
